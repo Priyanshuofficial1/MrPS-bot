@@ -1,0 +1,1 @@
+export interface STT{listen():AsyncGenerator<string>;stop():Promise<void>}export interface TTS{speak(text:string):Promise<void>}export interface WakeWord{start(cb:()=>void):Promise<void>;stop():Promise<void>}export class ConsoleTTS implements TTS{async speak(text:string){console.log("MrPS:",text)}}

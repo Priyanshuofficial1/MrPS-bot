@@ -1,0 +1,1 @@
+{"name":"mrps-bot","version":"1.0.0","private":true,"type":"module","scripts":{"start":"bun run src/server.ts","dev":"bun run src/server.ts","test":"bun test","typecheck":"tsc --noEmit","build":"bun run src/build.ts"}}

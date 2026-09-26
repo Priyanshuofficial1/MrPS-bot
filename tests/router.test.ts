@@ -1,0 +1,1 @@
+import{test,expect}from"bun:test";import{route}from"../src/router";test("time",()=>expect(route("what time is it").kind).toBe("time"));test("task",()=>expect(route("add task finish IPXDR").kind).toBe("task"));test("restricted",()=>expect(route("delete everything").permission).toBe("restricted"));test("open",()=>expect(route("open VS Code").kind).toBe("open"));

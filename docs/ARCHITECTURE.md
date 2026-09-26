@@ -1,0 +1,2 @@
+# MrPS Assistant Architecture
+A resident Bun daemon provides the control plane. A deterministic local intent router handles low-latency commands without an LLM. SQLite provides durable state. Platform adapters isolate Windows, browser, PowerShell and WSL operations. Voice providers implement STT/TTS/wake-word interfaces. The dashboard uses localhost JSON APIs. OpenBot remains a replaceable governed-computer adapter.
