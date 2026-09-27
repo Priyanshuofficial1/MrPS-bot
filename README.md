@@ -9,7 +9,7 @@ Open http://127.0.0.1:8787.
 what time is it; system status; open VS Code; open https://example.com; work on a project path; add task; remind me ... in 10 minutes; save idea.
 
 ## Voice
-src/voice.ts defines provider-neutral STT, TTS and wake-word contracts. Console/text is the deterministic fallback. Local engines can be plugged in without changing the core.
+The dashboard now has browser-native voice control: click the mic, say “MrPS”, then speak a command. Chrome/Edge handles STT/TTS without a paid API. See `docs/VOICE.md` and `scripts/install-startup.ps1` for PC-logon startup.
 
 ## Architecture
 Router -> permission policy -> assistant -> adapters. SQLite stores tasks, ideas and audit records locally. A resident scheduler checks due reminders. The dashboard is served by the same localhost daemon. OpenBot is isolated behind an adapter.
