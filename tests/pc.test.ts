@@ -1,0 +1,1 @@
+import{test,expect}from"bun:test";import{permissionFor}from"../src/permissions";test("safe open auto",()=>expect(permissionFor("open VS Code")).toBe("auto"));test("destructive blocked",()=>expect(permissionFor("delete everything")).toBe("restricted"));test("shell confirm",()=>expect(permissionFor("run shell command")).toBe("confirm"));
