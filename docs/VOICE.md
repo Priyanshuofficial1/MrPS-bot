@@ -1,6 +1,9 @@
-# Voice mode
-MrPS uses the browser's native Web Speech API for the first voice milestone: no paid voice API and no cloud voice credential. Chrome/Edge provides speech recognition and speech synthesis. The UI runs continuous recognition while the mic is enabled, detects the wake phrase `MrPS`, executes the deterministic local router, and reads safe responses aloud.
-
-This is intentionally a provider interface: a future local Whisper/Vosk/Piper stack can replace browser speech without changing the assistant core.
-
-For true always-on PC startup behavior, install `scripts/install-startup.ps1` as a Windows logon task. The browser dashboard is then opened automatically.
+# MrPS real Windows voice control
+MrPS-Voice.ps1 is a local Windows companion using .NET System.Speech for microphone recognition and SpeechSynthesizer for TTS. No cloud STT/TTS is used.
+1. Start MrPS and confirm http://127.0.0.1:8787/api/health.
+2. Run Set-ExecutionPolicy -Scope CurrentUser RemoteSigned if needed.
+3. Run scripts/windows-voice/smoke-test.ps1.
+4. Run scripts/windows-voice/MrPS-Voice.ps1.
+5. Say MrPS, then the command, or say MrPS, what time is it.
+6. Run scripts/windows-voice/install.ps1 for Windows-login startup; uninstall.ps1 removes it.
+If System.Speech/microphone is unavailable, the companion exits with an explicit diagnostic. Browser voice remains a fallback. Voice never bypasses MrPS permission checks.

@@ -1,0 +1,1 @@
+export function extractWakeCommand(text:string,wakeWord=process.env.MRPS_WAKE_WORD||"MrPS"){const re=new RegExp("\\b"+wakeWord+"\\b[,:;.!]?\\s*(.*)$","i");const m=text.trim().match(re);return m?{wake:true,command:m[1].trim()}:{wake:false,command:""}}

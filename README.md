@@ -16,3 +16,6 @@ Router -> permission policy -> assistant -> adapters. SQLite stores tasks, ideas
 
 ## Security
 The server binds to localhost. Destructive/security-sensitive phrases are blocked. Add authentication before exposing it beyond localhost. Keep credentials in .env and never source control them. Audit records stay local.
+
+## Real Windows Voice
+See docs/VOICE.md. scripts/windows-voice/MrPS-Voice.ps1 provides local wake-word, STT, command dispatch and TTS using Windows Speech. install.ps1 enables Windows-login startup and smoke-test.ps1 verifies prerequisites.
